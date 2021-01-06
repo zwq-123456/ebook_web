@@ -1,0 +1,27 @@
+@import 'reset';
+$fontSize:37.5;
+@function px2rem($px){
+    @return ($px/$fontSize)+rem;
+}
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconfont{
+    color:#333;
+    font-size: px2rem(20);
+}
+.slide-up-enter,
+.slide-up-leave-to {
+  transform: translate3d(0, px2rem(108), 0);
+}
+.slide-up-enter-to,
+.slide-up-leave {
+  transform: translate3d(0, 0, 0);
+}
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.3s linear;
+}
+
